@@ -1,0 +1,10 @@
+<h1>My Rails Girls Diary</h1>
+<div>
+  <br>
+  <p><%= link_to("Powrot do strony glownej", root_path) %></p>
+  <br>
+  <% for entry in @entries %>
+    <h2><%= link_to(entry.title, entry_path(entry)) %></h2>
+      <p><%= entry.date %></p>
+  <% end %>
+</div>
